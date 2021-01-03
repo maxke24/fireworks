@@ -1,6 +1,7 @@
 let textFireworks = [];
 let fireworks = [];
 let gravity;
+let texts = true;
 let upliftingTexts = ["I love you!", "You're the best!", "You are my sunshine!"]
 
 function preload() {
@@ -23,10 +24,13 @@ function setup() {
 
 function draw() {
     background(0, 25);
-    if (textFireworks.length <= 0) {
-        let index = Math.floor(Math.random() * upliftingTexts.length);
-        let text = upliftingTexts[index];
+    if(texts){
+        if (textFireworks.length <= 0) {
+            let index = Math.floor(Math.random() * upliftingTexts.length);
+            let text = upliftingTexts[index];
             textFireworks.push(new FireworkText(text));
+        }
+
     }
 
     if(random() < 0.02){
