@@ -2,10 +2,11 @@ let textFireworks = [];
 let fireworks = [];
 let gravity;
 let texts = true;
+let font;
 let upliftingTexts = ["I love you!", "You're the best!", "You are my sunshine!"]
 
 function preload() {
-    font = loadFont("assets/fonts/Poppins-Medium.ttf");
+    font = loadFont("../generalAssets/fonts/Poppins-Medium.ttf");
 }
 
 function setup() {
