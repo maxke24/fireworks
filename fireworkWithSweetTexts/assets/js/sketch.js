@@ -24,7 +24,7 @@ function setup() {
 }
 
 function draw() {
-    background(0, 25);
+    background(0, 50);
     if(texts){
         if (textFireworks.length <= 0) {
             let index = Math.floor(Math.random() * upliftingTexts.length);
