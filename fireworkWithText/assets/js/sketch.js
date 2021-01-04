@@ -14,7 +14,7 @@ function setup() {
     background(0);
     textSize(120);
     textFont(font);
-    gravity = createVector(0, 0.2);
+    gravity = createVector(0, height/979*0.2);
     stroke(255);
     fill(255);
     strokeWeight(8);
