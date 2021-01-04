@@ -10,7 +10,7 @@ class ParticleText {
         this.maxSpeed = 10;
         this.maxForce = 5;
         if (this.firework) {
-            this.vel = createVector(0, random(-10, -16));
+            this.vel = createVector(0, random(-10, -20));
 
         } else {
             this.vel = p5.Vector.random2D();
