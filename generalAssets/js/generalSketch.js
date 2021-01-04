@@ -34,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-    background(0, 50);
+    background(0, 75);
 
     if(random() < 0.02){
         fireworks.push(new Firework());
@@ -49,19 +49,22 @@ function draw() {
 
     if(text){
         if (textFireworks.length <= 0) {
-            let list = upliftingTextList;
-            if(!upliftingTexts){
-                list = textList;
+            if(random() < 0.01){
+                let list = upliftingTextList;
+                if(!upliftingTexts){
+                    list = textList;
+                }
+                let index = Math.floor(Math.random() * list.length);
+                let text = list[index];
+                textFireworks.push(new FireworkText(text));
             }
-            let index = Math.floor(Math.random() * list.length);
-            let text = list[index];
-            textFireworks.push(new FireworkText(text));
-        }
-        for (let i = textFireworks.length - 1; i >= 0; i--) {
-            textFireworks[i].update();
-            textFireworks[i].show();
-            if (textFireworks[i].done()) {
-                textFireworks.splice(i, 1);
+        }else{
+            for (let i = textFireworks.length - 1; i >= 0; i--) {
+                textFireworks[i].update();
+                textFireworks[i].show();
+                if (textFireworks[i].done()) {
+                    textFireworks.splice(i, 1);
+                }
             }
         }
     }
