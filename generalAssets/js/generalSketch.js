@@ -12,7 +12,7 @@ function preload() {
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(0);
-    gravity = createVector(0, height/979*0.3);
+    gravity = createVector(0, height/979*0.1);
     textSize(120);
     textFont(font);
     stroke(255);
