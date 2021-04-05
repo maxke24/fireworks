@@ -33,7 +33,7 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(0, 97);
 
     if(random() < 0.03){
         fireworks.push(new Firework());
