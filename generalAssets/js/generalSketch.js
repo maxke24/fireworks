@@ -3,7 +3,7 @@ let gravity;
 let textFireworks = [];
 let font;
 let upliftingTextList = ["I love you!", "You're the best!", "You are my sunshine!"];
-let textList = ["Fuck you!", "Get rekt!", "Ha Gay!"];
+let textList = ["Programming", "Javascript!"];
 
 function preload() {
     font = loadFont("../generalAssets/fonts/Poppins-Medium.ttf");
@@ -12,7 +12,7 @@ function preload() {
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(0);
-    gravity = createVector(0, height/979*0.2);
+    gravity = createVector(0, height/979*0.3);
     textSize(120);
     textFont(font);
     stroke(255);
@@ -25,8 +25,7 @@ function setup() {
             textFireworks.push(new FireworkText("You're", 0));
 
         }else{
-            textFireworks.push(new FireworkText("You", 1));
-            textFireworks.push(new FireworkText("Fuck", 0));
+            textFireworks.push(new FireworkText("Programming", 0));
         }
 
     }
@@ -34,9 +33,9 @@ function setup() {
 }
 
 function draw() {
-    background(0, 75);
+    background(51);
 
-    if(random() < 0.02){
+    if(random() < 0.03){
         fireworks.push(new Firework());
     }
     for (let i = fireworks.length - 1; i >= 0; i--) {
