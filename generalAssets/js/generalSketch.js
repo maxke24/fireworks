@@ -2,6 +2,7 @@ let fireworks = [];
 let gravity;
 let textFireworks = [];
 let font;
+let amount = 0.5;
 let upliftingTextList = ["I love you!", "You're the best!", "You are my sunshine!"];
 let textList = ["Programming", "Javascript!"];
 
@@ -35,7 +36,7 @@ function setup() {
 function draw() {
     background(0, 97);
 
-    if(random() < 0.03){
+    if(random() < amount){
         fireworks.push(new Firework());
     }
     for (let i = fireworks.length - 1; i >= 0; i--) {
