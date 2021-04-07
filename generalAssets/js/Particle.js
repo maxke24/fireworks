@@ -35,7 +35,7 @@ class Particle {
 
     show() {
         if (!this.firework) {
-            strokeWeight(2);
+            strokeWeight(5);
             stroke(this.color[0], this.color[1], this.color[2], this.lifespan);
         } else {
             strokeWeight(4);
